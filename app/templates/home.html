@@ -1,0 +1,79 @@
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Products view</title>-->
+<!--    <link rel="stylesheet" href="{% static 'home.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    {% for product in data %}-->
+<!--    <div class="product-container">-->
+<!--        <h1>{{ product.name }}</h1>-->
+<!--        <p class="price">${{ product.price }}</p>-->
+<!--        {% if product.image.url %}-->
+<!--            <img src="{{ product.image.url }}" alt="{{ product.name }}">-->
+<!--        {% else %}-->
+<!--            <img src="{{ product.image }}" alt="{{ product.name }}">-->
+<!--        {% endif %}-->
+<!--        <p>{{ product.description }}</p>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Products view</title>-->
+<!--    <link rel="stylesheet" href="{% static 'home.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    {% for product in data %}-->
+<!--    <div class="product-container">-->
+<!--        <h1>{{ product.name }}</h1>-->
+<!--        <p class="price">${{ product.price }}</p>-->
+<!--        {% if product.image %}-->
+<!--            {% if product.image.url %}-->
+<!--                <img src="{{ product.image.url }}" alt="{{ product.name }}">-->
+<!--            {% else %}-->
+<!--                <img src="{{ product.image }}" alt="{{ product.name }}">-->
+<!--            {% endif %}-->
+<!--        {% endif %}-->
+<!--        <p>{{ product.description }}</p>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products view</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+<div class="container">
+    {% for product in data %}
+    <div class="product-container">
+        <h1>{{ product.name }}</h1>
+        <p class="price">${{ product.price }}</p>
+        {% if "https" not in product.image.url%}
+            <img src="{{ product.image.url}}" alt="{{ product.name }}">
+        {% else %}
+        <img src="{{ product.image}}" alt="{{ product.name }}">
+        {% endif %}
+        <p>{{ product.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>

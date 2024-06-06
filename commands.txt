@@ -1,0 +1,8 @@
+django-admin startproject monte .
+py manage.py startapp shop
+py manage.py migrate
+py manage.py makemigrations shop
+py manage.py migrate
+py manage.py sqlmigrate shop 0001
+py manage.py shell
+py manage.py createsuperuser

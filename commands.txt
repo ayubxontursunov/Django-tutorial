@@ -6,3 +6,7 @@ py manage.py migrate
 py manage.py sqlmigrate shop 0001
 py manage.py shell
 py manage.py createsuperuser
+
+Admins.
+username: superuser
+password: admin123

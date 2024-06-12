@@ -1,6 +1,6 @@
 # Django Tutorial
 
-<img src="https://www.djangoproject.com/s/img/logos/django-logo-negative.png" alt="Django Logo" width="200"/>
+<img src="https://www.djangoproject.com/s/img/logos/django-logo-negative.png" alt="Django Logo" width="150"/>
 
 This repository contains code for a Django tutorial covering the basics of setting up a Django project, creating apps, defining models, views, and templates.
 

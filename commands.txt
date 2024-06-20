@@ -10,3 +10,9 @@ py manage.py createsuperuser
 Admins.
 username: superuser
 password: admin123
+
+
+redirect('home')
+redirect('https://github.com/ayubxontursunov')
+
+it's allowed to place url's name or link inside redirect() to lead certain page.
